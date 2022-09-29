@@ -1,0 +1,57 @@
+.match-bubbles {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5vmax;
+  border-radius: 50rem;
+  padding: 1rem 2rem 1rem 65px;
+  background-color: rgba(255, 255, 255, .85);
+  color: #F96461;
+  width: 85vw;
+  font-size: 18px;
+}
+
+.match-page {
+  height: 48vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #fccc5273;
+  border-radius: 1rem;
+  display: flex;
+  width: 90vw;
+  flex-direction: column;
+  padding: .75em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+.match-chat {
+  display: flex;
+  align-self: center;
+  position: relative;
+  align-content: center;
+}
+
+.match-avatar{
+  height: 50px;
+  position:absolute;
+  left: 5px;
+  top: 7px;
+
+  .avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+}
+
+.match-container{
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.match-link{
+  width: 90%;
+}

@@ -1,0 +1,31 @@
+.message-form {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.message-form-box {
+  margin-top: 50px;
+  border-radius: 50rem;
+  width: 100%;
+}
+
+.message-form-button {
+  color: white;
+}
+
+.message-send textarea:focus {
+  color: white;
+}
+
+.message-send {
+  display: flex;
+  align-self: center;
+  position:relative;
+  align-content: center;
+  width: 100%;
+  margin: -37px 0px -27px 0px;
+}
+
+.message_send::placeholder {
+  color: rgb(255, 255, 255);
+}

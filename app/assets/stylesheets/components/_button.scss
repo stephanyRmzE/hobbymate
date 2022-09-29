@@ -1,0 +1,130 @@
+.btn-ghost:hover {
+  opacity: 1;
+}
+
+.btn-add-hobby {
+  color: white;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.35);
+  filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 4px);
+  font-size: 1.5vmax;
+  border-radius: 5rem;
+  padding: 0.8rem 4rem;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  margin: 6%;
+}
+
+.findHobbymate {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+.btn-add-hobby:hover {
+  background: #ffffff;
+  color: rgb(151, 151, 151);
+}
+
+.btn-match {
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  background: #08ce01;
+  color: white;
+  transition: background 0.3s ease;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 120px;
+}
+
+.btn-match:hover {
+  background: #ffffff;
+  color: rgb(151, 151, 151);
+}
+
+.btn-match-pass {
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  background: #f80707;
+  color: white;
+  transition: background 0.3s ease;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 120px;
+}
+
+.btn-match-pass:hover {
+  background: #ffffff;
+  color: rgb(151, 151, 151);
+}
+
+.devise-button {
+  display: flow-root;
+  border-radius: 5rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgba(255,0,0,0.4);
+  font-size: 16px;
+  padding: 0.2rem 3rem;
+  border: none;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+.devise-button:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.form-actions {
+  padding-bottom: 40px;
+}
+
+// delete button on the user/:id/show
+
+.btn-delete img {
+  width: 22px;
+  color: white;
+  filter: brightness(0) invert(1);
+}
+
+// delete button on the no_match
+.btn-show_match p a {
+  border-radius: 5rem;
+  color: white;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.35);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+  font-size: 1.5vmax;
+  padding: 0.8rem 4rem;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-show_match p {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.buttons-swipe{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.75em;
+
+}
+
+// submit button for edit the progile page
+.edit-user-button {
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: auto;
+}

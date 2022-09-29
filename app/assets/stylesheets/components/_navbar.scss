@@ -1,0 +1,65 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background-color: transparent;
+  height: 75px;
+  display: block;
+}
+.navbar-title-website {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-title-website:hover {
+  color: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.dropdown-menu-end {
+  background-color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 255, 255);
+}
+
+.nav-link img {
+  width: 30px;
+  height: 30px;
+  display: inline;
+}
+
+.nav-item {
+  display: flex;
+}
+
+.me-auto {
+    /* margin-right: auto !important; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: linear-gradient(to top, #f5a65c, #f5ae5c);
+    position: relative;
+    z-index: 1;
+}
+
+.message-login img {
+  width: 30px;
+  height: 30px;
+  display: inline;
+}
+
+.navbar-main {
+  margin: 0px;
+}

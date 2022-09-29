@@ -1,0 +1,12 @@
+<div class="hobby-card">
+  <div class="card-image">
+    <%= cl_image_tag hobby.photo.key  %>
+  </div>
+  <div class="hobby-items-div">
+    <div class="card-name">
+      <%= hobby.name %>
+    </div>
+    <%= f.check_box "hobbies[#{hobby.id}]", :class => "add-hobby" %>
+    <%= f.label "hobbies[#{hobby.id}]", "Add hobby" %>
+  </div>
+</div>

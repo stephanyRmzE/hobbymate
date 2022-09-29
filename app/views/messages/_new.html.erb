@@ -1,0 +1,14 @@
+<div class="message-form">
+  <%= simple_form_for [@match, @message],
+      remote: true,
+      html: {data: {match_subscription_target: "form"}, class: "d-flex"} do |f|
+  %>
+  <div class="message-send">
+    <%= f.input :content,
+    label: false,
+    placeholder: "Message your Hobbymate!", as: :text,
+    wrapper_html: {class: "message-form-box"}%>
+    <%= f.submit "Send", :class => "message-button"%>
+  <% end %>
+  </div>
+</div>
