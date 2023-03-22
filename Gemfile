@@ -36,6 +36,7 @@ gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
 gem 'geocoder'
 gem 'pundit'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'faker'
 
