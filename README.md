@@ -16,3 +16,5 @@ rails db:seed
 ```
 
 Thank you for visiting our project - we welcome any feedback or suggestions for changes.
+
+changes...
