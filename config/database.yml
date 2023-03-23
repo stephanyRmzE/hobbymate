@@ -73,16 +73,15 @@ test:
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
 #
-production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+#production:
+#  <<: *default
+#  url: <%= ENV['DATABASE_URL'] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
 production:
   <<: *default
-  url: <%= ENV['MY_APP_DATABASE_URL'] %>
   database: hobbymate_production
   username: hobbymate
   password: <%= ENV['HOBBYMATE_DATABASE_PASSWORD'] %>
