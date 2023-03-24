@@ -10,5 +10,15 @@
       "predeploy": "bundle exec rake assets:precompile",
       "postdeploy": "bundle exec rails db:migrate"
     }
-  }
+  },
+
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-pgbouncer"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+
 }
