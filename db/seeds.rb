@@ -504,86 +504,6 @@ user_ten = User.create!(email: "user_ten@gmail.com", password: "123456", first_n
 file = URI.open('https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80')
 user_ten.photo.attach(io: file, filename: user_ten.last_name, content_type: 'image/jpeg')
 
-user_eleven = User.create!(email: "user_eleven@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Eleven", age: 26, address: "Pl. de Pau Vila, 3, 08039 Barcelona", bio: "I absolutely love all animals - but the best is the #{Faker::Creature::Animal.name}. I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1442&q=80')
-user_eleven.photo.attach(io: file, filename: user_eleven.last_name, content_type: 'image/jpeg')
-
-user_twelve = User.create!(email: "user_twelve@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Twelve", age: 22, address: "Pl. de Pau Vila, 7, 08039 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1592755219588-d4ff92a0d4de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_twelve.photo.attach(io: file, filename: user_twelve.last_name, content_type: 'image/jpeg')
-
-user_thirteen = User.create!(email: "user_thirteen@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Thirteen", age: 64, address: "Carrer de Rafael Capdevila, 1-3, 08018 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1585807515950-bc46d934c28b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_thirteen.photo.attach(io: file, filename: user_thirteen.last_name, content_type: 'image/jpeg')
-
-user_fourteen = User.create!(email: "user_fourteen@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Fourteen", age: 35, address: "Av. del Maresme, 192, 08918 Badalona, Barcelona", bio: "I'm a total gamer, I love to play #{Faker::Game.title}. I also love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1507152832244-10d45c7eda57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80')
-user_fourteen.photo.attach(io: file, filename: user_fourteen.last_name, content_type: 'image/jpeg')
-
-user_fifteen = User.create!(email: "user_fifteen@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Fifteen", age: 31, address: "Rambla de Sant Joan, 59, 08917 Badalona, Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}. I can't stop playing #{Faker::Game.title} right now, it's the best!")
-file = URI.open('https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_fifteen.photo.attach(io: file, filename: user_fifteen.last_name, content_type: 'image/jpeg')
-
-user_sixteen = User.create!(email: "user_sixteen@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Sixteen", age: 29, address: "Carrer de Sant Antoni Maria Claret, 362, 08041 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}. I'd love to learn more about #{Faker::Science.science}!")
-file = URI.open('https://images.unsplash.com/photo-1523825036634-aab3cce05919?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_sixteen.photo.attach(io: file, filename: user_sixteen.last_name, content_type: 'image/jpeg')
-
-
-user_seventeen = User.create!(email: "user_seventeen@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Seventeen", age: 52, address: "Carrer de Larrard, 41, 08024 Barcelona", bio: "I watch loads of anime, I really like #{Faker::JapaneseMedia::StudioGhibli.movie} and #{Faker::JapaneseMedia::StudioGhibli.movie} at the moment. I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1699&q=80')
-user_seventeen.photo.attach(io: file, filename: user_seventeen.last_name, content_type: 'image/jpeg')
-
-user_eighteen = User.create!(email: "user_eighteen@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Eighteen", age: 26, address: "Passeig de Manuel Girona, 33, 08034 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1499651681375-8afc5a4db253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1697&q=80')
-user_eighteen.photo.attach(io: file, filename: user_eighteen.last_name, content_type: 'image/jpeg')
-
-user_nineteen = User.create!(email: "user_nineteen@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Nineteen", age: 30, address: "Avinguda de Rio de Janeiro, 42, 08016 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80')
-user_nineteen.photo.attach(io: file, filename: user_nineteen.last_name, content_type: 'image/jpeg')
-
-user_twenty = User.create!(email: "user_twenty@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Twenty", age: 37, address: "C/ de la Portaferrissa, 22, 08002 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}. Fact about me...I can't stand #{Faker::Restaurant.type} food.")
-file = URI.open('https://images.unsplash.com/photo-1487573884658-a5d3c667584e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1703&q=80')
-user_twenty.photo.attach(io: file, filename: user_twenty.last_name, content_type: 'image/jpeg')
-
-user_twentyone = User.create!(email: "user_twentyone@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Twentyone", age: 27, address: "Avinguda de Rio de Janeiro, 20, 08016 Barcelona", bio: "My favourite film is 100% #{Faker::JapaneseMedia::StudioGhibli.movie}. I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1543965170-4c01a586684e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1749&q=80')
-user_twentyone.photo.attach(io: file, filename: user_twentyone.last_name, content_type: 'image/jpeg')
-
-user_twentytwo = User.create!(email: "user_twentytwo@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Twentytwo", age: 24, address: "Carrer de la Selva de Mar, 40, 08019 Barcelona", bio: "I am obsessed with music, my favorite band is #{Faker::Music.band}. I also love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1509839862600-309617c3201e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_twentytwo.photo.attach(io: file, filename: user_twentytwo.last_name, content_type: 'image/jpeg')
-
-user_twentythree = User.create!(email: "user_twentythree@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Twentythree", age: 34, address: "Carrer de la Selva de Mar, 60, 08019 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}. Can't stop listening to #{Faker::Music.band} right now!")
-file = URI.open('https://images.unsplash.com/photo-1601935111741-ae98b2b230b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_twentythree.photo.attach(io: file, filename: user_twentythree.last_name, content_type: 'image/jpeg')
-
-user_twentyfour = User.create!(email: "user_twentyfour@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Twentyfour", age: 29, address: "C/ de Provença, 312, 08037 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}. I'm a total nerd for #{Faker::Science.science}.")
-file = URI.open('https://images.unsplash.com/photo-1536551739350-d473d0f5d66a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_twentyfour.photo.attach(io: file, filename: user_twentyfour.last_name, content_type: 'image/jpeg')
-
-user_twentyfive = User.create!(email: "user_twentyfive@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Twentyfive", age: 20, address: "Rambla de Catalunya, 37, 08007 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1543050047-17cdabbc2d1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80')
-user_twentyfive.photo.attach(io: file, filename: user_twentyfive.last_name, content_type: 'image/jpeg')
-
-user_twentysix = User.create!(email: "user_twentysix@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Twentysix", age: 23, address: "Carrer del Comte d'Urgell, 1, 08011 Barcelona", bio: "Best musician, without a doubt: #{Faker::Music.band}. I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1513097633097-329a3a64e0d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80')
-user_twentysix.photo.attach(io: file, filename: user_twentysix.last_name, content_type: 'image/jpeg')
-
-user_twentyseven = User.create!(email: "user_twentyseven@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Twentyseven", age: 31, address: "La Rambla, 51-59, 08002 Barcelona", bio: "I'm trying really hard to learn to play the #{Faker::Music.instrument}. I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1622395165399-f2fc02cb605a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80')
-user_twentyseven.photo.attach(io: file, filename: user_twentyseven.last_name, content_type: 'image/jpeg')
-
-user_twentyeight = User.create!(email: "user_twentyeight@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Twentyeight", age: 37, address: "Carrer de Montcada, 25, 08003 Barcelona", bio: "If you can play the #{Faker::Music.instrument} please let me know, I really want to learn! I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_twentyeight.photo.attach(io: file, filename: user_twentyeight.last_name, content_type: 'image/jpeg')
-
-user_twentynine = User.create!(email: "user_twentynine@gmail.com", password: "123456", first_name: Faker::Name.male_first_name, last_name: "Twentynine", age: 36, address: "Av. de Francesc Cambó, 30, 08003 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}. Fun fact: I've played the #{Faker::Music.instrument} for 12 years now - it's so fun!")
-file = URI.open('https://images.unsplash.com/photo-1596747742222-008b5a85bc0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_twentynine.photo.attach(io: file, filename: user_twentynine.last_name, content_type: 'image/jpeg')
-
-user_thirty = User.create!(email: "user_thirty@gmail.com", password: "123456", first_name: Faker::Name.female_first_name, last_name: "Thirty", age: 42, address: "Carrer de Buenaventura Muñoz, 11, 08018 Barcelona", bio: "I love #{Faker::Hobby.activity} and #{Faker::Hobby.activity}.")
-file = URI.open('https://images.unsplash.com/photo-1490195117352-aa267f47f2d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
-user_thirty.photo.attach(io: file, filename: user_thirty.last_name, content_type: 'image/jpeg')
 
 # USER HOBBY SEEDS - THIS WILL ASSIGN HOBBIES TO BOTH MATCHED AND UNMATCHED USERS, SO THEY SHOW UP IN EACH OTHER'S SUGGESTIONS
 UserHobby.create!(user_id: user_one.id, hobby_id: hobby_sample_one.id)
@@ -625,76 +545,9 @@ UserHobby.create!(user_id: user_ten.id, hobby_id: hobby_sample_four.id)
 UserHobby.create!(user_id: user_ten.id, hobby_id: hobby_sample_seven.id)
 UserHobby.create!(user_id: user_ten.id, hobby_id: hobby_sample_ten.id)
 
-UserHobby.create!(user_id: user_eleven.id, hobby_id: hobby_sample_one.id)
-UserHobby.create!(user_id: user_eleven.id, hobby_id: hobby_sample_two.id)
 
-UserHobby.create!(user_id: user_twelve.id, hobby_id: hobby_sample_three.id)
-UserHobby.create!(user_id: user_twelve.id, hobby_id: hobby_sample_four.id)
-UserHobby.create!(user_id: user_twelve.id, hobby_id: hobby_sample_five.id)
 
-UserHobby.create!(user_id: user_thirteen.id, hobby_id: hobby_sample_six.id)
-UserHobby.create!(user_id: user_thirteen.id, hobby_id: hobby_sample_seven.id)
 
-UserHobby.create!(user_id: user_fourteen.id, hobby_id: hobby_sample_eight.id)
-UserHobby.create!(user_id: user_fourteen.id, hobby_id: hobby_sample_nine.id)
-UserHobby.create!(user_id: user_fourteen.id, hobby_id: hobby_sample_ten.id)
 
-UserHobby.create!(user_id: user_fifteen.id, hobby_id: hobby_sample_nine.id)
-
-UserHobby.create!(user_id: user_sixteen.id, hobby_id: hobby_sample_eight.id)
-UserHobby.create!(user_id: user_sixteen.id, hobby_id: hobby_sample_seven.id)
-UserHobby.create!(user_id: user_sixteen.id, hobby_id: hobby_sample_five.id)
-UserHobby.create!(user_id: user_sixteen.id, hobby_id: hobby_sample_three.id)
-
-UserHobby.create!(user_id: user_seventeen.id, hobby_id: hobby_sample_six.id)
-UserHobby.create!(user_id: user_seventeen.id, hobby_id: hobby_sample_seven.id)
-
-UserHobby.create!(user_id: user_eighteen.id, hobby_id: hobby_sample_eight.id)
-UserHobby.create!(user_id: user_eighteen.id, hobby_id: hobby_sample_nine.id)
-UserHobby.create!(user_id: user_eighteen.id, hobby_id: hobby_sample_two.id)
-UserHobby.create!(user_id: user_eighteen.id, hobby_id: hobby_sample_one.id)
-
-UserHobby.create!(user_id: user_nineteen.id, hobby_id: hobby_sample_two.id)
-UserHobby.create!(user_id: user_nineteen.id, hobby_id: hobby_sample_eight.id)
-
-UserHobby.create!(user_id: user_twenty.id, hobby_id: hobby_sample_eight.id)
-UserHobby.create!(user_id: user_twenty.id, hobby_id: hobby_sample_seven.id)
-UserHobby.create!(user_id: user_twenty.id, hobby_id: hobby_sample_four.id)
-
-UserHobby.create!(user_id: user_twentyone.id, hobby_id: hobby_sample_one.id)
-UserHobby.create!(user_id: user_twentyone.id, hobby_id: hobby_sample_four.id)
-UserHobby.create!(user_id: user_twentyone.id, hobby_id: hobby_sample_eight.id)
-
-UserHobby.create!(user_id: user_twentytwo.id, hobby_id: hobby_sample_one.id)
-UserHobby.create!(user_id: user_twentytwo.id, hobby_id: hobby_sample_five.id)
-
-UserHobby.create!(user_id: user_twentythree.id, hobby_id: hobby_sample_ten.id)
-
-UserHobby.create!(user_id: user_twentyfour.id, hobby_id: hobby_sample_nine.id)
-UserHobby.create!(user_id: user_twentyfour.id, hobby_id: hobby_sample_eight.id)
-
-UserHobby.create!(user_id: user_twentyfive.id, hobby_id: hobby_sample_seven.id)
-UserHobby.create!(user_id: user_twentyfive.id, hobby_id: hobby_sample_six.id)
-
-UserHobby.create!(user_id: user_twentysix.id, hobby_id: hobby_sample_five.id)
-UserHobby.create!(user_id: user_twentysix.id, hobby_id: hobby_sample_four.id)
-UserHobby.create!(user_id: user_twentysix.id, hobby_id: hobby_sample_three.id)
-UserHobby.create!(user_id: user_twentysix.id, hobby_id: hobby_sample_two.id)
-
-UserHobby.create!(user_id: user_twentyseven.id, hobby_id: hobby_sample_one.id)
-UserHobby.create!(user_id: user_twentyseven.id, hobby_id: hobby_sample_two.id)
-UserHobby.create!(user_id: user_twentyseven.id, hobby_id: hobby_sample_three.id)
-UserHobby.create!(user_id: user_twentyseven.id, hobby_id: hobby_sample_four.id)
-
-UserHobby.create!(user_id: user_twentyeight.id, hobby_id: hobby_sample_five.id)
-UserHobby.create!(user_id: user_twentyeight.id, hobby_id: hobby_sample_six.id)
-UserHobby.create!(user_id: user_twentyeight.id, hobby_id: hobby_sample_seven.id)
-UserHobby.create!(user_id: user_twentyeight.id, hobby_id: hobby_sample_eight.id)
-
-UserHobby.create!(user_id: user_twentynine.id, hobby_id: hobby_sample_nine.id)
-UserHobby.create!(user_id: user_twentynine.id, hobby_id: hobby_sample_ten.id)
-
-UserHobby.create!(user_id: user_thirty.id, hobby_id: hobby_sample_ten.id)
-UserHobby.create!(user_id: user_thirty.id, hobby_id: hobby_sample_two.id)
 
 puts "seeding completed"
