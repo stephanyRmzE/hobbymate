@@ -1,6 +1,6 @@
 {
   "name": "hobbymate",
-  "description": "My awesome Rails app, running on Dokku!",
+  "description": "The primary goal of the app is to help users find new hobbies and interests, and to find and connect with other people who share them",
   "keywords": [
     "dokku",
     "rails"
