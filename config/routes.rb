@@ -19,4 +19,6 @@ Rails.application.routes.draw do
       post "create_many"
     end
   end
+
+  get '/check.txt', to: proc {[200, {}, ['it_works']]}
 end
