@@ -14,5 +14,5 @@ ActiveStorage.start()
 
 import bootstrap from "bootstrap/dist/js/bootstrap"
 import "controllers"
-
+require("@fortawesome/fontawesome-free/js/all");
 //= require hammer
