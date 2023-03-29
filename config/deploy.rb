@@ -4,7 +4,18 @@ lock "~> 3.17.2"
 set :application, "hobbymate"
 set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
 
+namespace :deploy do
+  desc "Run seed"
+  task :seed do
+    on roles(:all) do
+      within current_path do
+        execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
+      end
+    end
+  end
 
+  after :migrating, :seed
+end
 
 
 # Default branch is :master
