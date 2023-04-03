@@ -32,6 +32,8 @@ RUN gem install nokogiri --platform=ruby
 RUN rm -rf /var/cache/apk/* \
 && mkdir -p $APP_PATH
 
+COPY Gemfile /hobbymate/Gemfile
+COPY Gemfile.lock /hobbymate/Gemfile.lock
 
 RUN gem install bundler --version "$BUNDLE_VERSION" && bundle install --jobs=3 --retry=3 \
 && rm -rf $GEM_HOME/cache/*
