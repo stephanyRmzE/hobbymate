@@ -27,23 +27,22 @@ imagemagick \
 tzdata \
 less
 
+RUN gem install nokogiri --platform=ruby
+RUN gem install bootstrap --platform=ruby
 
 
 RUN rm -rf /var/cache/apk/* \
 && mkdir -p $APP_PATH
 
-COPY Gemfile /hobbymate/Gemfile
-COPY Gemfile.lock /hobbymate/Gemfile.lock
 
-RUN gem install bundler --version "$BUNDLE_VERSION"
-RUN gem install nokogiri --platform=ruby
-RUN bundle install
-RUN bundle update
-
-RUN rm -rf $GEM_HOME/cache/*
+RUN gem install bundler --version "$BUNDLE_VERSION" \
+&& rm -rf $GEM_HOME/cache/*
 
 # navigate to app directory
 WORKDIR $APP_PATH
+COPY Gemfile* ./
+RUN bundle install
+COPY . .
 
 EXPOSE $RAILS_PORT
 

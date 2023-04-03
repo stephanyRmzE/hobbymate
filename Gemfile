@@ -43,6 +43,7 @@ gem 'faker'
 
 gem "nokogiri"
 
+gem 'bootstrap', '~> 5.1.3'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
