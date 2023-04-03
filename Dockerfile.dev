@@ -33,7 +33,7 @@ RUN rm -rf /var/cache/apk/* \
 && mkdir -p $APP_PATH
 
 
-RUN gem install bundler --version "$BUNDLE_VERSION" \
+RUN gem install bundler --version "$BUNDLE_VERSION" && bundle install --jobs=3 --retry=3 \
 && rm -rf $GEM_HOME/cache/*
 
 # navigate to app directory
