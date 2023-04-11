@@ -33,8 +33,6 @@ Rails.application.configure do
   config.assets.compile = false
 
   config.assets.prefix = "/assets"
-  
-  config.assets.initialize_on_precompile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = 'http://assets.example.com'

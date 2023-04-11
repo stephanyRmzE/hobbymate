@@ -28,8 +28,6 @@ tzdata \
 less
 
 RUN gem install nokogiri --platform=ruby
-RUN gem install bootstrap --platform=ruby
-
 
 RUN rm -rf /var/cache/apk/* \
 && mkdir -p $APP_PATH
@@ -40,9 +38,6 @@ RUN gem install bundler --version "$BUNDLE_VERSION" \
 
 # navigate to app directory
 WORKDIR $APP_PATH
-COPY Gemfile* ./
-RUN bundle install
-COPY . .
 
 EXPOSE $RAILS_PORT
 
