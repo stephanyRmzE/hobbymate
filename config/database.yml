@@ -89,6 +89,7 @@ test:
 #
 production:
   <<: *default
+
   host: <%= ENV["DATABASE_HOST"] %>
   database: hobbymate_production
   username: stephany
