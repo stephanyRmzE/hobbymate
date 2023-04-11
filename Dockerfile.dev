@@ -10,7 +10,8 @@ ENV RAILS_PORT 3000
 # copy entrypoint scripts and grant execution permissions
 COPY ./dev-docker-entrypoint.sh /usr/local/bin/dev-entrypoint.sh
 COPY ./test-docker-entrypoint.sh /usr/local/bin/test-entrypoint.sh
-RUN chmod +x /usr/local/bin/dev-entrypoint.sh && chmod +x /usr/local/bin/test-entrypoint.sh
+COPY ./entrypoint.sh /usr/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/dev-entrypoint.sh && chmod +x /usr/local/bin/test-entrypoint.sh && chmod +x /usr/bin/entrypoint.sh
 
 # install dependencies for application
 RUN apk -U add --no-cache \
@@ -27,7 +28,6 @@ imagemagick \
 tzdata \
 less
 
-RUN gem install nokogiri --platform=ruby
 
 RUN rm -rf /var/cache/apk/* \
 && mkdir -p $APP_PATH
@@ -41,4 +41,4 @@ WORKDIR $APP_PATH
 
 EXPOSE $RAILS_PORT
 
-ENTRYPOINT [ "bundle", "exec" ]
+ENTRYPOINT ["entrypoint.sh", "bundle", "exec"]
