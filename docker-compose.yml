@@ -8,7 +8,7 @@ volumes:
   shared_data:
 services:
   hobbymate_db:
-    image: postgres:12.5-alpine
+    image: postgres:14.7-alpine
     container_name: hobbymate_db
     volumes:
       - db_data:/var/lib/postgresql/data
@@ -30,15 +30,13 @@ services:
       - .:/var/app
       - shared_data:/var/shared
       - gem_cache:/usr/local/bundle/gems
-    networks:
-      - development
     ports:
       - 3000:3000
     stdin_open: true
     tty: true
     env_file: .env.development
     entrypoint: dev-entrypoint.sh
-    command: ["rails", "server", "-p", "3000", "-b", "0.0.0.0"]
+    command: ["bundle", "exec", "rails", "server", "-p", "3000", "-b", "0.0.0.0"]
     environment:
       RAILS_ENV: development
     depends_on:
@@ -49,7 +47,6 @@ services:
     volumes:
       - .:/var/app
       - shared_data:/var/shared
-      - gem_cache:/usr/local/bundle/gems
     networks:
       - test
     ports:
