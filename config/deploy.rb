@@ -4,12 +4,13 @@ lock "~> 3.17.2"
 set :application, "hobbymate"
 set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
 
+set :nvm_type, :user # Or :system, depends on your deployment setup
+set :nvm_node, 'v16.15.1' # Replace with the version you need
 
 
 
 set :deploy_to, "/home/stephany/#{fetch :application}"
-set :default_env, {
-  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE']
+set :default_env, { 'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE']
 }
 
 # Default value for :format is :airbrussh.
