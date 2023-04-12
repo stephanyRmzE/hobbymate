@@ -13,10 +13,6 @@
 #
 # Configure Using Gemfile
 # gem 'pg'
-#
-
-require 'dotenv'
-Dotenv.load('.env')
 
 default: &default
   adapter: postgresql
