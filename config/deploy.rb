@@ -1,5 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.2"
+require 'dotenv'
+Dotenv.load('.env')
+
 
 set :application, "hobbymate"
 set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
@@ -11,7 +14,7 @@ set :nvm_node, 'v16.15.1' # Replace with the version you need
 
 set :deploy_to, "/home/stephany/#{fetch :application}"
 set :default_env, {
-  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE',]
+  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE']
 }
 
 # Default value for :format is :airbrussh.
