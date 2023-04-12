@@ -13,6 +13,12 @@ set :deploy_to, "/home/stephany/#{fetch :application}"
 set :default_env, { 'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE']
 }
 
+set :default_env, {
+  'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH",
+  'NODE_ENV' => 'production',
+  'NODE_VERSION' => 'v16.15.1'
+}
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
