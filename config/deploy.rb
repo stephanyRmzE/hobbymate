@@ -10,7 +10,8 @@ set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
 
 set :deploy_to, "/home/stephany/#{fetch :application}"
 set :default_env, {
-  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE']
+  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
+  'HOBBYMATE_DATABASE_PASSWORD' => ENV['HOBBYMATE_DATABASE_PASSWORD']
 }
 
 # Default value for :format is :airbrussh.
