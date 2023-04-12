@@ -8,7 +8,9 @@ set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
 
 
 set :deploy_to, "/home/stephany/#{fetch :application}"
-
+set :default_env, {
+  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE']
+}
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -38,19 +40,15 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
-
-# Define the list of files to be symlinked
-append :linked_files, "config/credentials/production.key"
-
 namespace :deploy do
-  desc "Create the credentials file"
-  task :create_credentials_file do
-    on roles(:app) do
-      execute "mkdir -p #{shared_path}/config/credentials"
-      upload! "config/credentials/production.key", "#{shared_path}/config/credentials/production.key"
+  desc "Run seed"
+  task :seed do
+    on roles(:all) do
+      within current_path do
+        execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
+      end
     end
   end
-end
 
-# Call the create_credentials_file task after `deploy:check:linked_files`
-after "deploy:check:linked_files", "deploy:create_credentials_file"
+  after :migrating, :seed
+end
