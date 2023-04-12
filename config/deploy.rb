@@ -22,7 +22,7 @@ set :deploy_to, "/home/stephany/#{fetch :application}"
 
 # Default value for :linked_files is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
-append :linked_files, "config/credentials/production.key"
+
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "tmp/webpacker", "public/system", "vendor", "storage"
@@ -38,15 +38,19 @@ append :linked_files, "config/credentials/production.key"
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+# Define the list of files to be symlinked
+append :linked_files, "config/credentials/production.key"
+
 namespace :deploy do
-  desc "Run seed"
-  task :seed do
-    on roles(:all) do
-      within current_path do
-        execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
-      end
+  desc "Create the credentials file"
+  task :create_credentials_file do
+    on roles(:app) do
+      execute "mkdir -p #{shared_path}/config/credentials"
+      upload! "config/credentials/production.key", "#{shared_path}/config/credentials/production.key"
     end
   end
-
-  after :migrating, :seed
 end
+
+# Call the create_credentials_file task after `deploy:check:linked_files`
+after "deploy:check:linked_files", "deploy:create_credentials_file"
