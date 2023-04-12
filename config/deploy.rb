@@ -7,11 +7,8 @@ set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
 
 
 
-# Default branch is :master
- ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :deploy_to, "/home/stephany/#{fetch :application}"
 
-# Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/deploy/hobbymate'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
