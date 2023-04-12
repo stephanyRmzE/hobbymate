@@ -60,15 +60,11 @@ end
 
 before 'deploy:assets:precompile', 'deploy:create_migrate_seed_db'
 
-namespace :custom do
-  desc 'Edit credentials file'
+namespace :deploy do
+  desc "Edit Rails credentials file on remote server"
   task :edit_credentials do
-    on roles(:app) do
-      within current_path do
-        execute :EDITOR, 'nano', 'bin/rails credentials:edit'
-      end
+    on roles(:app) do |host|
+      execute :EDITOR, "nano bin/rails credentials:edit"
     end
   end
 end
-
-after 'deploy:updated', 'custom:edit_credentials'
