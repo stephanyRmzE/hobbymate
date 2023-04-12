@@ -10,13 +10,11 @@ set :nvm_node, 'v16.15.1' # Replace with the version you need
 
 
 set :deploy_to, "/home/stephany/#{fetch :application}"
-set :default_env, { 'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE']
-}
-
 set :default_env, {
   'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH",
   'NODE_ENV' => 'production',
-  'NODE_VERSION' => 'v16.15.1'
+  'NODE_VERSION' => 'v16.15.1',
+  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE',]
 }
 
 # Default value for :format is :airbrussh.
