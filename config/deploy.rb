@@ -64,7 +64,7 @@ namespace :deploy do
   desc "Edit Rails credentials file on remote server"
   task :edit_credentials do
     on roles(:app) do |host|
-      execute :EDITOR, "nano bin/rails credentials:edit"
+      execute :bash, '-c', 'EDITOR=nano bin/rails credentials:edit'
     end
   end
 end
