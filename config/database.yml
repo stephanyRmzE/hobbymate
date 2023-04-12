@@ -88,5 +88,4 @@ production:
   <<: *default
   database: hobbymate_production
   username: hobbymate
-  password: <%= ENV["DATABASE_PASSWORD"] %>
-
+  password: <%= ENV['HOBBYMATE_DATABASE_PASSWORD'] %>
