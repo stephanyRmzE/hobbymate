@@ -6,7 +6,10 @@
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-
+set :default_env, {
+  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
+  'HOBBYMATE_DATABASE_PASSWORD' => ENV['HOBBYMATE_DATABASE_PASSWORD']
+}
 
 server '164.90.234.97', user: 'stephany', roles: %w{app db web}
 # role-based syntax
