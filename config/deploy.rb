@@ -49,7 +49,7 @@ before 'deploy:check:linked_files', :upload_files do
     upload!('config/master.key', "#{release_path}/config/master.key")
     upload!('config/credentials.yml.enc', "#{release_path}/config/credentials.yml.enc")
   end
-end 
+end
 
 namespace :deploy do
   desc 'Create, migrate, and seed the database'
@@ -68,11 +68,3 @@ end
 
 before 'deploy:assets:precompile', 'deploy:create_migrate_seed_db'
 
-namespace :deploy do
-  desc "Edit Rails credentials file on remote server"
-  task :edit_credentials do
-    on roles(:app) do |host|
-      execute :bash, '-c', 'EDITOR=nano bin/rails credentials:edit'
-    end
-  end
-end
