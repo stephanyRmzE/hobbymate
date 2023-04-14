@@ -36,7 +36,6 @@ server '164.90.234.97', user: 'stephany', roles: %w{app db web}
 # Feel free to add new variables to customise your setup.
 
 set :default_env, {
-  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
   'HOBBYMATE_DATABASE_PASSWORD' => ENV['HOBBYMATE_DATABASE_PASSWORD']
 }
 
