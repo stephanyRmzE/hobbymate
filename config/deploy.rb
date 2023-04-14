@@ -68,4 +68,3 @@ namespace :deploy do
 
   before 'deploy:assets:precompile', 'deploy:upload_configs', 'deploy:create_migrate_seed_db'
 end
-
