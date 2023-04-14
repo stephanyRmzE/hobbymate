@@ -42,6 +42,12 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+before 'deploy:check:linked_files', :upload_files do
+  on roles(:app) do
+    upload!('config/database.yml', "#{shared_path}/config/database.yml")
+    upload!('config/credentials/production.key', "#{shared_path}/config/credentials/production.key")
+  end
+end
 
 namespace :deploy do
   desc 'Create, migrate, and seed the database'
