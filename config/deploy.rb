@@ -25,6 +25,7 @@ set :default_env, {
 # set :pty, true
 
 # Default value for :linked_files is []
+append :linked_files, 'config/database.yml', 'config/credentials/production.key'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
 
@@ -45,7 +46,8 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 before 'deploy:check:linked_files', :upload_files do
   on roles(:app) do
     upload!('config/database.yml', "#{shared_path}/config/database.yml")
-    upload!('config/credentials/production.key', "#{shared_path}/config/credentials/production.key")
+    upload!('config/master.key', "#{release_path}/config/master.key")
+    upload!('config/credentials.yml.enc', "#{release_path}/config/credentials.yml.enc")
   end
 end
 
