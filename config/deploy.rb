@@ -10,7 +10,6 @@ set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
 
 set :deploy_to, "/home/stephany/#{fetch :application}"
 set :default_env, {
-  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
   'HOBBYMATE_DATABASE_PASSWORD' => ENV['HOBBYMATE_DATABASE_PASSWORD']
 }
 
@@ -46,10 +45,11 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 before 'deploy:check:linked_files', :upload_files do
   on roles(:app) do
     upload!('config/database.yml', "#{shared_path}/config/database.yml")
+    upload!('config/credentials/production.yml.enc', "#{release_path}/config/credentials/production.yml.enc")
     upload!('config/master.key', "#{release_path}/config/master.key")
     upload!('config/credentials.yml.enc', "#{release_path}/config/credentials.yml.enc")
   end
-end
+end 
 
 namespace :deploy do
   desc 'Create, migrate, and seed the database'
