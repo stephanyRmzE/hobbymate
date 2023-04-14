@@ -44,15 +44,19 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 # set :ssh_options, verify_host_key: :secure
 
 namespace :deploy do
-  desc 'Upload configuration files'
-  task :upload_configs do
-    on roles(:app) do |host|
-      upload!('config/database.yml', "#{release_path}/config/database.yml")
-      upload!('config/master.key', "#{release_path}/config/master.key")
-      upload!('config/credentials.yml.enc', "#{release_path}/config/credentials.yml.enc")
+
+  desc 'Create, migrate, and seed the database'
+  task :create_migrate_seed_db do
+    on roles(:db) do |host|
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, 'db:create'
+          execute :rake, 'db:migrate'
+          execute :rake, 'db:seed'
+        end
+      end
     end
   end
 
-
-  before 'deploy:assets:precompile', 'deploy:upload_configs'
+  before 'deploy:assets:precompile', 'deploy:create_migrate_seed_db'
 end
