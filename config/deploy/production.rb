@@ -10,10 +10,7 @@
 require 'dotenv'
 Dotenv.load('.env')
 
-set :default_env, {
-  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
-  'HOBBYMATE_DATABASE_PASSWORD' => ENV['HOBBYMATE_DATABASE_PASSWORD']
-}
+
 
 server '164.90.234.97', user: 'stephany', roles: %w{app db web}
 # role-based syntax
@@ -37,6 +34,11 @@ server '164.90.234.97', user: 'stephany', roles: %w{app db web}
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
+
+set :default_env, {
+  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
+  'HOBBYMATE_DATABASE_PASSWORD' => ENV['HOBBYMATE_DATABASE_PASSWORD']
+}
 
 
 
