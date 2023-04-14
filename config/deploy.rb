@@ -10,6 +10,7 @@ set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
 
 set :deploy_to, "/home/stephany/#{fetch :application}"
 set :default_env, {
+  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
   'HOBBYMATE_DATABASE_PASSWORD' => ENV['HOBBYMATE_DATABASE_PASSWORD']
 }
 
@@ -43,7 +44,6 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 # set :ssh_options, verify_host_key: :secure
 
 namespace :deploy do
-
   desc 'Create, migrate, and seed the database'
   task :create_migrate_seed_db do
     on roles(:db) do |host|
@@ -56,6 +56,6 @@ namespace :deploy do
       end
     end
   end
-
-  before 'deploy:assets:precompile', 'deploy:create_migrate_seed_db'
 end
+
+before 'deploy:assets:precompile', 'deploy:create_migrate_seed_db'
