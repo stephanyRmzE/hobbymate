@@ -53,18 +53,6 @@ namespace :deploy do
     end
   end
 
-  desc 'Create, migrate, and seed the database'
-  task :create_migrate_seed_db do
-    on roles(:db) do |host|
-      within release_path do
-        with rails_env: fetch(:rails_env) do
-          execute :rake, 'db:create'
-          execute :rake, 'db:migrate'
-          execute :rake, 'db:seed'
-        end
-      end
-    end
-  end
 
-  before 'deploy:assets:precompile', 'deploy:upload_configs', 'deploy:create_migrate_seed_db'
+  before 'deploy:assets:precompile', 'deploy:upload_configs'
 end
