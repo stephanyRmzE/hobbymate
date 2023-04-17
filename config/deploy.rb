@@ -6,13 +6,10 @@ Dotenv.load('.env')
 
 set :application, "hobbymate"
 set :repo_url, "git@github.com:stephanyRmzE/hobbymate.git"
+set :branch,'master'
 
+set :deploy_to, "/home/deploy/#{fetch :application}"
 
-set :deploy_to, "/home/stephany/#{fetch :application}"
-set :default_env, {
-  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
-  'HOBBYMATE_DATABASE_PASSWORD' => ENV['HOBBYMATE_DATABASE_PASSWORD']
-}
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
