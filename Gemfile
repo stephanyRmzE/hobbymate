@@ -68,6 +68,8 @@ group :development do
   gem 'capistrano-yarn'
   gem 'capistrano3-nginx', '~> 2.0'
   gem 'capistrano-passenger'
+  gem 'ed25519', '~> 1.3'
+  gem 'bcrypt_pbkdf', '~> 1.1'
 
 end
 
