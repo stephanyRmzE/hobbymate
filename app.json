@@ -1,9 +1,12 @@
 {
   "scripts": {
-  "predeploy": "bundle install",
-  "postdeploy": "bundle exec rake assets:precompile",
-  "db:create": "bundle exec rake db:create",
-  "db:migrate": "bundle exec rake db:migrate",
-  "db:seed": "bundle exec rake db:seed"
+    "dokku": {
+      "predeploy": "bundle install",
+      "postdeploy": "bundle exec rake assets:precompile",
+      "db:create": "bundle exec rake db:create",
+      "db:migrate": "bundle exec rake db:migrate",
+      "db:seed": "bundle exec rake db:seed"
+    }
+
   }
 }
