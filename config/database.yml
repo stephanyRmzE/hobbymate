@@ -86,6 +86,7 @@ test:
 #
 production:
   <<: *default
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: <%= ENV['DATABASE_URL'] %>
-  
+  database: hobbymate_production
+  host: <%= ENV["MY_APP_DATABASE_HOST"] %>
+  username: <%= ENV["MY_APP_DATABASE_USERNAME"] %>
+  password: <%= ENV["MY_APP_DATABASE_PASSWORD"] %>
